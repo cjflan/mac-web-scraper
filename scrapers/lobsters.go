@@ -27,7 +27,7 @@ func ParseLobsters() {
 	doc.Find(".u-url").Each(func(i int, s *goquery.Selection) {
 		post := s.Text()
 		link, linkExists := s.Attr("href")
-		macRelated := strings.EqualFold(post, "mac") || strings.EqualFold(post, "apple")
+		macRelated := strings.Contains(strings.ToLower(post), "mac") || strings.Contains(strings.ToLower(post), "apple")
 		if linkExists && macRelated {
 			fmt.Printf("%s: %s\n", post, link)
 		}

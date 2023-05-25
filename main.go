@@ -6,6 +6,6 @@ import (
 
 func main() {
 	mac_scraping.ParseRedditDevops()
-	// mac_scraping.ParseLobsters()
-	// mac_scraping.ParseHackerNews()
+	mac_scraping.ParseLobsters()
+	mac_scraping.ParseHackerNews()
 }
